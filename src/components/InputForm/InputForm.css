@@ -1,0 +1,141 @@
+/* src/components/InputForm/InputForm.css */
+
+.input-form-popup-unique {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top */
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  overflow-y: auto; /* Allow vertical scrolling for the popup */
+  padding: 20px; /* Add padding around the modal */
+}
+
+.input-form-content-unique {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  /* overflow-y: auto; Remove this here, the popup handles scrolling */
+  margin: 20px 0; /* Adjust top/bottom margin */
+}
+
+.input-form-content-unique h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.input-form-unique {
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.form-group-unique {
+  margin-bottom: 20px;
+}
+
+.form-group-unique label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.form-group-unique input[type='number'],
+.form-group-unique select {
+  width: calc(100% - 18px);
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group-unique input[type='number']:focus,
+.form-group-unique select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.5);
+}
+
+.form-group-unique select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%2334495e" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 0.9em;
+}
+
+.submit-button-unique {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button-unique:hover {
+  background-color: #219653;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button-unique:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-button-unique {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-button-unique:hover {
+  background-color: #c0392b;
+}
+
+/* Style for the prediction result container */
+.prediction-result-container-unique {
+  text-align: center;
+  padding: 20px;
+}
+
+.prediction-result-container-unique h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.prediction-value-unique {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #27ae60; /* Or any color you prefer for the result */
+  margin-bottom: 15px;
+}

@@ -1,0 +1,183 @@
+/* src/components/PredictionForm.css */
+.prediction-form-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    max-width: 95%;
+    margin: 0px auto;
+    max-height: 80vh; /* Adjust the percentage as needed */
+    overflow-y: auto;
+  }
+  
+  .prediction-form-container::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  
+  .prediction-form-container::-webkit-scrollbar-thumb {
+    background: transparent !important;
+  }
+  
+  .prediction-form-container::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  .prediction-form-container h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .form-group input[type="number"],
+  .form-group select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #444;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input[type="number"]:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .form-group select option {
+    font-size: 1rem;
+    color: #444;
+    padding: 8px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 35px;
+  }
+  
+  .form-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .form-actions button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  }
+  
+  .form-actions button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+  }
+  
+  .form-actions button[type="button"]:hover {
+    background-color: #545b62;
+    box-shadow: 0 6px 10px rgba(108, 117, 125, 0.3);
+  }
+  
+  /* Style for the modal overlay (if you are using one) */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .modal-content {
+    /* Inherits styles from .prediction-form-container */
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Styles for the prediction result */
+.prediction-result-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.prediction-result-container h3 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.prediction-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #198754;
+    margin-bottom: 15px;
+}
+
+.prediction-error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.prediction-result-container button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.prediction-result-container button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.prediction-result-container button:last-child {
+    background-color: #6c757d;
+    color: white;
+}
+
+.prediction-result-container button:hover {
+    opacity: 0.9;
+}

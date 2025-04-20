@@ -1,0 +1,202 @@
+.re-input-form-popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Subtle background blur */
+    overflow: auto;
+}
+
+.re-input-form-popup::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.re-input-form-popup::-webkit-scrollbar-thumb {
+    background: transparent !important;
+}
+
+.re-input-form-popup::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.re-input-form-content {
+    background: linear-gradient(135deg, #f0f2f5, #e1e6ed); /* Soft gradient background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: translateY(-20px); /* Subtle entrance animation */
+    opacity: 0;
+    animation: slideIn 0.4s ease-out forwards;
+    border: 1px solid #d0d5dd;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.re-input-form-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50; /* Darker, professional color */
+    font-size: 2.2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.re-input-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px;
+}
+
+.re-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.re-form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 1em;
+}
+
+.re-form-group input[type="number"],
+.re-form-group select {
+    padding: 12px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.re-form-group input[type="number"]:focus,
+.re-form-group select:focus {
+    outline: none;
+    border-color: #3498db; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Style for select dropdown arrow */
+.re-form-group select {
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%233498db" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: 50%;
+    padding-right: 35px; /* Adjust for arrow */
+}
+
+.re-submit-button,
+.re-modal-close-button-1 {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.re-submit-button {
+    background-color: #2ecc71; /* Vibrant green */
+    color: white;
+    grid-column: span 2; /* Span both columns */
+    margin-top: 25px;
+}
+
+.re-submit-button:hover {
+    background-color: #27ae60;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.re-modal-close-button-1 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: black;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 50%; /* Circular close button */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.re-modal-close-button-1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.re-prediction-result {
+    grid-column: span 2;
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #d4edda; /* Light green for success */
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    font-weight: 600;
+    text-align: center;
+    color: #155724; /* Dark green text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .re-input-form {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .re-submit-button {
+        grid-column: span 1; /* Span single column */
+    }
+}
+
+.re-prediction-result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.re-prediction-result h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #28a745; /* Example color for success */
+}
+
+.re-prediction-result p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.re-prediction-error {
+    color: #dc3545; /* Example color for error */
+    font-weight: bold;
+}
+
+.re-modal-close-button-2 {
+    background-color: #007bff;
+}
+
+.re-modal-close-button-2:hover {
+    background-color: #0056b3;
+}

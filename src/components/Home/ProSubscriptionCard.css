@@ -1,0 +1,243 @@
+/* ProSubscriptionCard.css */
+.pro-subscription-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pro-subscription-modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pro-subscription-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+.pro-subscription-description {
+  color: #555;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.pro-subscription-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.pro-subscription-features li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.pro-subscription-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.pro-subscription-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pro-subscription-close-button,
+.pro-subscription-subscribe-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+}
+
+.pro-subscription-close-button {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.pro-subscription-close-button:hover {
+  background-color: #e0e0e0;
+}
+
+.pro-subscription-subscribe-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.pro-subscription-subscribe-button:hover {
+  background-color: #0056b3;
+}
+
+/* Checkout Form Styles */
+.checkout-container {
+  margin-top: 25px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 20px;
+  padding-top: 50px; /* Added padding at the top to create space */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.pro-subscription-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.pro-subscription-back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #555;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.pro-subscription-back-button:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-element-wrapper {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.payment-error {
+  color: #dc3545;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.pro-subscription-pay-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.pro-subscription-pay-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pro-subscription-pay-button:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.StripeElement {
+  padding: 12px;
+  font-size: 16px;
+  color: #424770;
+}
+
+.StripeElement--focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.StripeElement--invalid {
+  border-color: #dc3545;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+/* ProSubscriptionCard.css */
+
+/* ... existing styles ... */
+
+.payment-success-popup {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.payment-success-popup h2 {
+  color: #28a745; /* Green color for success */
+  margin-bottom: 15px;
+}
+
+.payment-success-popup p {
+  margin-bottom: 20px;
+}
+
+.payment-success-popup .pro-subscription-close-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.payment-success-popup .pro-subscription-close-button:hover {
+  background-color: #0056b3;
+}
