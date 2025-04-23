@@ -158,7 +158,7 @@ const PredictionForm = ({ onClose, onPredictionSaved }) => {
       setPredictionResult(predictionData.prediction); // Store the prediction
 
       // Send the prediction and form data to your Node.js backend
-      const nodejsBackendURL = "https://back-hospital-1.onrender.com/api/predictions/save"; // Replace with your actual URL
+      const nodejsBackendURL = 'https://back-hospital-1.onrender.com/api/predictions/save'; // Replace with your actual URL
       const userId = localStorage.getItem("userId"); // Replace with actual user ID
       console.log("User ID from localStorage:", userId); // Add this log
 
