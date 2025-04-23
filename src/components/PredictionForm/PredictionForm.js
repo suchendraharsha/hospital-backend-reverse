@@ -171,7 +171,7 @@ const PredictionForm = ({ onClose, onPredictionSaved }) => {
         body: JSON.stringify({
           userId: userId,
           inputData: formData,
-          prediction: predictionData.prediction_lr,
+          prediction: predictionData.prediction,
           modelUsed: modelUsed,
         }),
       });

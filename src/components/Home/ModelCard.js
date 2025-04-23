@@ -15,7 +15,7 @@ const ModelCard = ({ title, description, onClick, themeColor, isLocked, icon }) 
       </div>
       <h3 className="model-title">
         {title}
-        {!isLocked && <FontAwesomeIcon icon={faLock} className="lock-icon" />}
+        {isLocked==false && <FontAwesomeIcon icon={faLock} className="lock-icon" />}
       </h3>
       <p className="model-description">{description}</p>
     </div>
