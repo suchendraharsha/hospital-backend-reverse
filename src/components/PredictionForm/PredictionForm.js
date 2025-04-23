@@ -138,7 +138,7 @@ const PredictionForm = ({ onClose, onPredictionSaved }) => {
     setPredictionResult(null); // Clear previous result
 
     try {
-      const flaskResponse = await fetch("https://rf-diabetes-git-main-suchendras-projects-fe97e969.vercel.app//predict", {
+      const flaskResponse = await fetch("http://localhost:8080/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -158,7 +158,7 @@ const PredictionForm = ({ onClose, onPredictionSaved }) => {
       setPredictionResult(predictionData.prediction); // Store the prediction
 
       // Send the prediction and form data to your Node.js backend
-      const nodejsBackendURL = "http://localhost:8081/api/predictions/save"; // Replace with your actual URL
+      const nodejsBackendURL = "https://back-hospital-1.onrender.com/api/predictions/save"; // Replace with your actual URL
       const userId = localStorage.getItem("userId"); // Replace with actual user ID
       console.log("User ID from localStorage:", userId); // Add this log
 

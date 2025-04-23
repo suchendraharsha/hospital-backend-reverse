@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const loadUser = async () => {
     if (authToken && userId) {
       try {
-        const res = await fetch('http://localhost:8081/api/auth/user', {
+        const res = await fetch(`https://back-hospital-1.onrender.com/api/auth/user?userId=${userId}`, {
           headers: {
             'Authorization': `Bearer ${authToken}`
           }

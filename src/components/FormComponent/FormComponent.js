@@ -52,7 +52,7 @@ const FormComponent = ({ onClose, onPredictionSaved }) => {
             setPredictionResult(predictionData.readmission_rate); // Store the prediction
 
             // Send the prediction and form data to your Node.js backend
-            const nodejsBackendURL = 'http://localhost:8081/api/predictions/save';
+            const nodejsBackendURL = 'https://back-hospital-1.onrender.com/api/predictions/save';
             const userId = localStorage.getItem('userId'); 
 
             const modelUsed = 'Logistic regression';

@@ -81,7 +81,7 @@ const CheckoutForm = ({ onCloseCheckout, userId, onPaymentSuccess, onSubscriptio
         console.log('Payment Method:', paymentMethod);
 
         try {
-            const response = await fetch('http://localhost:8081/api/auth/subscribe', {
+            const response = await fetch('https://back-hospital-1.onrender.com/api/auth/subscribe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

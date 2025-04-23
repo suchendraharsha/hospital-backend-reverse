@@ -24,7 +24,7 @@ const HomePage = () => {
             if (userId) {
                 try {
                     const response = await fetch(
-                        `http://localhost:8081/api/predictions/history/${userId}`
+                        `https://back-hospital-1.onrender.com/api/predictions/history/${userId}`
                     );
                     if (response.ok) {
                         const data = await response.json();
@@ -46,7 +46,7 @@ const HomePage = () => {
       if (userId) {
           try {
               const response = await fetch(
-                  `http://localhost:8081/api/predictions/history/${userId}`
+                  `https://back-hospital-1.onrender.com/api/predictions/history/${userId}`
               );
               if (response.ok) {
                   const data = await response.json();
